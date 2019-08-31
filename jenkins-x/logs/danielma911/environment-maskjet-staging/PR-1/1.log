@@ -1,0 +1,80 @@
+
+Showing logs for build [32mdanielma911-environment-maskjet-1[0m stage [32mmeta-pipeline[0m and container [32mstep-credential-initializer-8kk89[0m
+{"level":"warn","ts":1567270600.2756371,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1567270600.2760808,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mdanielma911-environment-maskjet-1[0m stage [32mmeta-pipeline[0m and container [32mstep-working-dir-initializer-7glq5[0m
+{"level":"warn","ts":1567270601.324062,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1567270601.3256402,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"mkdir -p /workspace/source\""}
+
+Showing logs for build [32mdanielma911-environment-maskjet-1[0m stage [32mmeta-pipeline[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mdanielma911-environment-maskjet-1[0m stage [32mmeta-pipeline[0m and container [32mstep-git-source-meta-danielma911-environment-ma-lwfsr[0m
+{"level":"warn","ts":1567270607.3583913,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1567270607.90492,"logger":"fallback-logger","caller":"git/git.go:102","msg":"Successfully cloned https://github.com/***********/environment-maskjet-staging.git @ 6bb3099c192ff2ab6382eaeda0b24c6342b98b63 in path /workspace/source"}
+
+Showing logs for build [32mdanielma911-environment-maskjet-1[0m stage [32mmeta-pipeline[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:6bb3099c192ff2ab6382eaeda0b24c6342b98b63,1:8983c4b1d9d80c099ecf16c6e86047d3271c6b99
+DEBUG: ran git fetch --unshallow origin 8983c4b1d9d80c099ecf16c6e86047d3271c6b99: 6bb3099c192ff2ab6382eaeda0b24c6342b98b63: in 
+DEBUG: ran git checkout master in 
+DEBUG: ran git reset --hard 6bb3099c192ff2ab6382eaeda0b24c6342b98b63 in 
+DEBUG: ran clean --force -d . in 
+DEBUG: ran git merge 8983c4b1d9d80c099ecf16c6e86047d3271c6b99 in 
+Merged SHA 8983c4b1d9d80c099ecf16c6e86047d3271c6b99 with commit message 'chore: Promote http-go-aks to version 0.0.1' into base branch master
+
+Showing logs for build [32mdanielma911-environment-maskjet-1[0m stage [32mmeta-pipeline[0m and container [32mstep-merge-pull-refs[0m
+DEBUG: ran git fetch origin 8983c4b1d9d80c099ecf16c6e86047d3271c6b99: 6bb3099c192ff2ab6382eaeda0b24c6342b98b63: in 
+DEBUG: Unshallowed git repo in 
+DEBUG: ran git checkout master in 
+DEBUG: ran git reset --hard 6bb3099c192ff2ab6382eaeda0b24c6342b98b63 in 
+DEBUG: ran clean --force -d . in 
+DEBUG: ran git merge 8983c4b1d9d80c099ecf16c6e86047d3271c6b99 in 
+Merged SHA 8983c4b1d9d80c099ecf16c6e86047d3271c6b99 with commit message 'chore: Promote http-go-aks to version 0.0.1' into base branch master
+
+Showing logs for build [32mdanielma911-environment-maskjet-1[0m stage [32mmeta-pipeline[0m and container [32mstep-create-effective-pipeline[0m
+Deleting and cloning the Jenkins X versions repo
+Cloning the Jenkins X versions repo https://github.com/jenkins-x/jenkins-x-versions.git with ref refs/heads/master to /builder/home/.**/jenkins-x-versions
+selected pack: /builder/home/.**/draft/packs/github.com/jenkins-x-buildpacks/jenkins-x-kubernetes/packs/environment
+Effective pipeline written to jenkins-x-promotion-build-effective.yml
+
+Showing logs for build [32mdanielma911-environment-maskjet-1[0m stage [32mmeta-pipeline[0m and container [32mstep-create-tekton-crds[0m
+PipelineActivity for ***********-environment-maskjet-staging-PR-1-1
+Applying changes 
+upserted PipelineResource ***********-environment-maskjet for the git repository https://github.com/***********/environment-maskjet-staging.git
+upserted Task ***********-environment-maskjet-from-build-pack-1
+upserted Pipeline ***********-environment-maskjet-1
+created PipelineRun ***********-environment-maskjet-1
+created PipelineStructure ***********-environment-maskjet-1
+
+Showing logs for build [32mdanielma911-environment-maskjet-1[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-s2tqz[0m
+{"level":"warn","ts":1567270619.582392,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1567270619.5829315,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mdanielma911-environment-maskjet-1[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-k6578[0m
+{"level":"warn","ts":1567270620.5331502,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1567270620.535034,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"mkdir -p /workspace/source /workspace/source/env\""}
+
+Showing logs for build [32mdanielma911-environment-maskjet-1[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mdanielma911-environment-maskjet-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-danielma911-environment-maskjet-cltnn[0m
+{"level":"warn","ts":1567270625.6433818,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1567270626.216012,"logger":"fallback-logger","caller":"git/git.go:102","msg":"Successfully cloned https://github.com/***********/environment-maskjet-staging.git @ master in path /workspace/source"}
+
+Showing logs for build [32mdanielma911-environment-maskjet-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:6bb3099c192ff2ab6382eaeda0b24c6342b98b63,1:8983c4b1d9d80c099ecf16c6e86047d3271c6b99
+DEBUG: ran git fetch --unshallow origin 8983c4b1d9d80c099ecf16c6e86047d3271c6b99: 6bb3099c192ff2ab6382eaeda0b24c6342b98b63: in 
+DEBUG: ran git checkout master in 
+DEBUG: ran git reset --hard 6bb3099c192ff2ab6382eaeda0b24c6342b98b63 in 
+DEBUG: ran clean --force -d . in 
+DEBUG: ran git merge 8983c4b1d9d80c099ecf16c6e86047d3271c6b99 in 
+Merged SHA 8983c4b1d9d80c099ecf16c6e86047d3271c6b99 with commit message 'chore: Promote http-go-aks to version 0.0.1' into base branch master
+
+Showing logs for build [32mdanielma911-environment-maskjet-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-helm-build[0m
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
+Successfully added Helm repository storage.googleapis.com.
+Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
+Successfully added Helm repository jenkins-x-chartmuseum.
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: chartmuseum.jenkins-x.io http://chartmuseum.jenkins-x.io
+Successfully added Helm repository chartmuseum.jenkins-x.io.
